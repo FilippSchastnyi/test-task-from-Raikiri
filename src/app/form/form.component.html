@@ -1,0 +1,21 @@
+<form class="p-d-flex p-shadow-4">
+  <ul>
+    <li>
+      <span class="p-mr-2">ФИО</span>
+      <input type="text" pInputText [value]="title"/>
+    </li>
+
+    <li>
+      <span class="p-mr-2">Телефон</span>
+      <input type="text" pInputText/>
+    </li>
+
+    <li>
+      <span class="p-mr-2">Почта</span>
+      <input type="text" pInputText/>
+    </li>
+    <li>
+      <button pButton type="submit" label="Добавить" (click)="addNewPerson()"></button>
+    </li>
+  </ul>
+</form>
