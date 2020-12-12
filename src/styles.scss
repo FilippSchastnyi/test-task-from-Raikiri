@@ -115,35 +115,3 @@ body {
   padding: 0 20px;
 }
 
-/*BUTTONS*/
-.btn {
-  display: inline-block;
-  vertical-align: middle;
-  cursor: pointer;
-  transition: 0.15s ease-in-out;
-  text-align: center;
-  padding: 12px 25px;
-  font-size: 16px;
-  line-height: 20px;
-  border-radius: 3px;
-  border: 1px solid #000;
-
-  &-primary {
-    background-color: $color-primary;
-    border-color: $color-primary;
-    color: #ffffff;
-
-    &:hover {
-      background-color: darken($color-primary, 5%);
-      border-color: darken($color-primary, 5%);
-      color: #ffffff;
-    }
-
-    &:disabled,
-    &.disabled {
-      background-color: $color-primary;
-      border-color: $color-primary;
-      color: #ffffff;
-    }
-  }
-}
