@@ -9,7 +9,11 @@ export class FormComponent {
   name: '';
   tel: '';
   email: '';
-  phonebook = [];
+  phonebook = [{
+    name: 'Ivanov Ivan Ivanovich',
+    tel: '+375 99 999 99 99',
+    email: 'Ivanov@Ivanov.com'
+  }];
 
   constructor() {
   }
@@ -19,7 +23,7 @@ export class FormComponent {
     if (this.name !== '') {
       this.phonebook.push({
         name: this.name,
-        phone: this.tel,
+        tel: this.tel,
         email: this.email,
       });
       this.name = '';
@@ -30,6 +34,6 @@ export class FormComponent {
 
   // tslint:disable-next-line:typedef
   deletePerson(event?) {
-    const person = event.target.closest('tr').remove();
+    event.target.closest('tr').remove();
   }
 }
