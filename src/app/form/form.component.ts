@@ -13,13 +13,13 @@ export class FormComponent {
   email: '';
   phonebook = [];
 
-  constructor(svc: CommonService) {
+  constructor(private commonService: CommonService) {
+
   }
 
   // tslint:disable-next-line:typedef
   addNewPerson() {
-    // tslint:disable-next-line:triple-equals
-    if (this.name != '') {
+    if (this.name !== '') {
       this.phonebook.push({
         name: this.name,
         phone: this.tel,
@@ -28,7 +28,7 @@ export class FormComponent {
       this.name = '';
       this.tel = '';
       this.email = '';
-      console.log(this.phonebook);
     }
+    this.commonService.test(this.phonebook);
   }
 }
