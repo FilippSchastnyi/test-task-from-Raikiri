@@ -2,17 +2,17 @@
   <ul>
     <li>
       <span class="p-mr-2">ФИО</span>
-      <input type="text" pInputText [value]="title"/>
+      <input type="text" pInputText name="user" [(ngModel)]="name"/>
     </li>
 
     <li>
       <span class="p-mr-2">Телефон</span>
-      <input type="text" pInputText/>
+      <input type="text" pInputText name="tel" [(ngModel)]="tel"/>
     </li>
 
     <li>
       <span class="p-mr-2">Почта</span>
-      <input type="text" pInputText/>
+      <input type="text" pInputText name="email" [(ngModel)]="email"/>
     </li>
     <li>
       <button pButton type="submit" label="Добавить" (click)="addNewPerson()"></button>

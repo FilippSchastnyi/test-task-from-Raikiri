@@ -9,6 +9,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {AppComponent} from './app.component';
 import {FormComponent} from './form/form.component';
 import {DetailsComponent} from './details/details.component';
+import {CommonService} from './services/common.service';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import {DetailsComponent} from './details/details.component';
     ButtonModule,
     InputTextModule
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

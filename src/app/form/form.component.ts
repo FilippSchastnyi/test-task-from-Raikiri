@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {CommonService} from '../services/common.service';
 
 @Component({
   selector: 'app-form',
@@ -6,13 +7,28 @@ import {Component} from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-  val: string;
-  title = '';
-  constructor() {
+
+  name: '';
+  tel: '';
+  email: '';
+  phonebook = [];
+
+  constructor(svc: CommonService) {
   }
 
   // tslint:disable-next-line:typedef
   addNewPerson() {
-    console.log('hello');
+    // tslint:disable-next-line:triple-equals
+    if (this.name != '') {
+      this.phonebook.push({
+        name: this.name,
+        phone: this.tel,
+        email: this.email
+      });
+      this.name = '';
+      this.tel = '';
+      this.email = '';
+      console.log(this.phonebook);
+    }
   }
 }
