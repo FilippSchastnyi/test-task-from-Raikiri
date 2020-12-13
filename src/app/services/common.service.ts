@@ -4,13 +4,18 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class CommonService {
-  // tslint:disable-next-line:typedef
-  test(arr) {
-
-  }
+  phonebook = [];
 
   constructor() {
   }
 
+  // tslint:disable-next-line:typedef
+  getArray(arr) {
+    this.phonebook = arr;
+  }
 
+  // tslint:disable-next-line:typedef
+  setArray() {
+    return this.phonebook;
+  }
 }

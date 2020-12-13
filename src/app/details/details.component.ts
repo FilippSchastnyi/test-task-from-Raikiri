@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {CommonService} from '../services/common.service';
 
 @Component({
   selector: 'app-details',
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent {
+  phonebook = [];
 
-  constructor() { }
+  constructor(private commonService: CommonService) {
+  }
 
+  // tslint:disable-next-line:typedef
+  phonebookLog() {
+    this.phonebook = this.commonService.setArray();
+    console.log(this.phonebook);
+  }
 }

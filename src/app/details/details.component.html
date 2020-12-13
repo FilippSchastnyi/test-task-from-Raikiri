@@ -16,8 +16,29 @@
     <td>ivanov@ivan.com</td>
     <td>
       <ul>
-        <li><button pButton type="button" label="Удалить" icon="pi pi-times-circle" class="p-button-warning"></button></li>
-        <li><button pButton type="button" label="Редaктировать" icon="pi pi-cog" class="p-button-info"></button></li>
+        <li>
+          <button pButton type="button" label="Удалить" icon="pi pi-times-circle" class="p-button-warning"></button>
+        </li>
+        <li>
+          <button pButton type="button" label="Редaктировать" icon="pi pi-cog" class="p-button-info"
+                  (click)="phonebookLog()"></button>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr *ngFor="let user of phonebook">
+    <td>1</td>
+    <td>{{user.name}}</td>
+    <td>{{user.phone}}</td>
+    <td>{{user.email}}</td>
+    <td>
+      <ul>
+        <li>
+          <button pButton type="button" label="Удалить" icon="pi pi-times-circle" class="p-button-warning"></button>
+        </li>
+        <li>
+          <button pButton type="button" label="Редaктировать" icon="pi pi-cog" class="p-button-info"></button>
+        </li>
       </ul>
     </td>
   </tr>

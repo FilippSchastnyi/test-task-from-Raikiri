@@ -29,6 +29,6 @@ export class FormComponent {
       this.tel = '';
       this.email = '';
     }
-    this.commonService.test(this.phonebook);
+    this.commonService.getArray(this.phonebook);
   }
 }
