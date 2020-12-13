@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {CommonService} from '../services/common.service';
 
 @Component({
   selector: 'app-form',
@@ -7,14 +6,12 @@ import {CommonService} from '../services/common.service';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-
   name: '';
   tel: '';
   email: '';
   phonebook = [];
 
-  constructor(private commonService: CommonService) {
-
+  constructor() {
   }
 
   // tslint:disable-next-line:typedef
@@ -23,12 +20,16 @@ export class FormComponent {
       this.phonebook.push({
         name: this.name,
         phone: this.tel,
-        email: this.email
+        email: this.email,
       });
       this.name = '';
       this.tel = '';
       this.email = '';
     }
-    this.commonService.getArray(this.phonebook);
+  }
+
+  // tslint:disable-next-line:typedef
+  deletePerson(event?) {
+    const person = event.target.closest('tr').remove();
   }
 }
